@@ -6,16 +6,24 @@
     font-family: 'Roman';
     src: url('/fontes/Roman.otf') format('opentype');
     font-weight: normal;
-    
 }
-
+@font-face {
+    font-family: 'Medium';
+    src: url(/fontes/NetflixSans-Medium.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Regular';
+    src: url(/fontes/NetflixSans-Regular.otf) format('opentype');
+}
 
 :root{
     --vermelha: #e50914; 
     --preta: #141414;
     
-    --fonte-titulo: 'Bebas Neue', cursive;
-    --fonte-poster: 'Roman', cursive;
+    --fonte-logo: 'Bebas Neue', cursive;
+    --fonte-titulo: 'Roman', cursive;
+    --fonte-medium: 'Medium', cursive;
+    --fonte-regular: 'Regular', cursive;
 }
 
 * {
@@ -34,22 +42,24 @@ header .container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
 }
 
 header .logo {
     margin-left: 20px;
+    margin-right: 20px;
     color: var(--vermelha);
-    font-family: var(--fonte-titulo);
+    font-family: var(--fonte-logo);
     font-size: 38px;
     font-weight: lighter;
     letter-spacing: 2.5px;
 }
 
 header nav a {
+    font-family: var(--fonte-regular);
+    font-size: 14px;
     text-decoration: none;
     color: #d6d4d4;
-    margin-right: 10px; 
+    margin-right: 20px; 
 }
 
 header nav a:hover {
@@ -57,16 +67,76 @@ header nav a:hover {
 }
 
 .filme-principal {
-    font-size: 15px;
-    background-image: url('/img/wallpaperflare.com_wallpaper.jpg');
-    background-color: var(--preta);
-    height: 600px;
-    min-width: 400px;
-    background-position: bottom ;
+    background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.068) 100%) , url('/img/wallpaperflare.com_wallpaper.jpg');
+    height: 500px;
+    background-position: center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .titulo {
-    font-size: 50px;
-    font-family: var(--fonte-poster);
+    font-size: 100px;
+    font-family: var(--fonte-titulo);
+    margin-left: 20px;
+}
+
+.filme-principal .assista {
+    font-size: 30px;
+    font-family: var(--fonte-medium);
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.filme-principal .descricao {
+    font-size: 26px;
+    font-family: var(--fonte-regular);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.botao-assistir {
+    font-family: var(--fonte-medium);
+    font-size: 23px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 25px;
+    margin-right: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao-informacao {
+    font-family: var(--fonte-medium);
+    font-size: 23px;
+    background-color: #696866c0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 25px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao-assistir i {
+    margin-right: 10px;
+}
+
+.botao-informacao i {
+    margin-right: 10px;
+}
+
+.botao-informacao:hover {
+    background-color: #5f5e5c5d;
+}
+
+.botao-assistir:hover {
+    background-color: #f0ede794;
 }
