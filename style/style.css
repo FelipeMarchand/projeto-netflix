@@ -1,5 +1,72 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Roman';
+    src: url('/fontes/Roman.otf') format('opentype');
+    font-weight: normal;
+    
+}
+
+
+:root{
+    --vermelha: #e50914; 
+    --preta: #141414;
+    
+    --fonte-titulo: 'Bebas Neue', cursive;
+    --fonte-poster: 'Roman', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(160, 158, 158);
+    background: var(--preta);
+    font-family: 'Times New Roman', Times, sans-serif;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    margin-left: 20px;
+    color: var(--vermelha);
+    font-family: var(--fonte-titulo);
+    font-size: 38px;
+    font-weight: lighter;
+    letter-spacing: 2.5px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #d6d4d4;
+    margin-right: 10px; 
+}
+
+header nav a:hover {
+    color: rgb(138, 138, 138);
+}
+
+.filme-principal {
+    font-size: 15px;
+    background-image: url('/img/wallpaperflare.com_wallpaper.jpg');
+    background-color: var(--preta);
+    height: 600px;
+    min-width: 400px;
+    background-position: bottom ;
+    background-size: cover;
+}
+
+.titulo {
+    font-size: 50px;
+    font-family: var(--fonte-poster);
 }
