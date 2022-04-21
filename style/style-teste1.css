@@ -137,13 +137,8 @@ header nav a:hover {
     background-color: #f0ede794;
 }
 
-.filme-principal .container {
-    width: 60%;
-    text-align: justify;
-}
-
 .box-filme {
-    height: 100%;
-    width: 100%;
+    height: 270px;
     display: block;
+    margin: 20px;
 }
