@@ -67,14 +67,10 @@ header nav a:hover {
 }
 
 .filme-principal {
-    background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.068) 100%) , url('/img/wallpaperflare.com_wallpaper.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.068) 100%) , url('/img/capa1.jpg');
     height: 500px;
     background-position: center;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 .titulo {
@@ -139,4 +135,15 @@ header nav a:hover {
 
 .botao-assistir:hover {
     background-color: #f0ede794;
+}
+
+.filme-principal .container {
+    width: 60%;
+    text-align: justify;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
 }
